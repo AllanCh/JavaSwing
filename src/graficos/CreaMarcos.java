@@ -1,4 +1,6 @@
 package graficos;
+import java.awt.Frame;
+
 import javax.swing.*;
 public class CreaMarcos {
 	
@@ -14,7 +16,12 @@ public class CreaMarcos {
 class miMarco extends JFrame{
 	
 	public miMarco() {
-		setSize(500,300);
+		//setSize(500,300);
+		//setLocation(500,300);
+		setBounds(500,300,550,250);//Esta instruccion resume las dos anteriores. Location, size.
+		setResizable(true);
+		//setExtendedState(Frame.MAXIMIZED_BOTH);//Permite maximizar la ventana.
+		setTitle("JAVA SWING");
 	}
 		
 }
