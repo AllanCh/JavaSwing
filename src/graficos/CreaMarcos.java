@@ -20,7 +20,7 @@ class miMarco extends JFrame{
 		//setLocation(500,300);
 		setBounds(500,300,550,250);//Esta instruccion resume las dos anteriores. Location, size.
 		setResizable(true);
-		//setExtendedState(Frame.MAXIMIZED_BOTH);//Permite maximizar la ventana.
+		//setExtendedState(Frame.MAXIMIZED_BOTH);//Maximiza la ventana al iniciar el programa.
 		setTitle("JAVA SWING");
 	}
 		
