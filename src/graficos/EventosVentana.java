@@ -1,5 +1,6 @@
 package graficos;
 
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -25,41 +26,13 @@ class MarcoVentana extends JFrame {
 		 * setTitle("Respondiendo"); setBounds(300, 300, 500, 350);
 		 */
 		setVisible(true);
-		EscuchaVentana oyenteVentana = new EscuchaVentana();
-		addWindowListener(oyenteVentana);
+		addWindowListener(new EscuchaVentana());
 	}
 }
 
-class EscuchaVentana implements WindowListener {
-
-	@Override
-	public void windowOpened(WindowEvent e) {
-	}
-
-	@Override
-	public void windowClosing(WindowEvent e) {
-	}
-
-	@Override
-	public void windowClosed(WindowEvent e) {
-	}
-
+class EscuchaVentana extends WindowAdapter {
 	@Override
 	public void windowIconified(WindowEvent e) {
 		System.out.println("Ventana minimizada");
 	}
-
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-	}
-
-	@Override
-	public void windowActivated(WindowEvent e) {
-		System.out.println("Ventana activada");
-	}
-
-	@Override
-	public void windowDeactivated(WindowEvent e) {
-	}
-
 }
